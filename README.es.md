@@ -16,6 +16,7 @@ El compartir de Nextcloud es excelente para enviar archivos a personas, pero sus
 - **Enlace raíz.** El enlace va amarrado a la identidad interna del archivo, no a su ruta, así que sigue funcionando si mueves el archivo de carpeta o le cambias el nombre. Solo muere si el archivo se elimina.
 - **Nombre real.** El enlace termina en el nombre y la extensión verdaderos (`…/DRILL.mp3`), que es lo que los reproductores de otras apps exigen.
 - **Control de acceso.** Los enlaces pueden ser públicos o protegidos con contraseña, y pueden tener fecha de vencimiento.
+- **Permisos que no se pisan.** El permiso de la carpeta y el del enlace son independientes — manda el más específico. Compartes un archivo de una carpeta privada y solo ese archivo se vuelve alcanzable (la app te pregunta antes, en palabras simples, y nunca necesitas copiar el archivo a otra parte); le pones candado a un solo archivo dentro de una carpeta pública y ese archivo queda fuera del compartir. Cada enlace lleva su propio nivel: solo ver, o también descargar.
 - **Carpeta con selección.** Comparte una carpeta y elige exactamente qué archivos se ven a través del enlace; el resto queda oculto.
 - **Un solo panel para todo.** Una página de ajustes lista todos los enlaces que has creado, con su acceso y vencimiento, listos para editar o revocar en cualquier momento.
 - **Sin invadir.** Si quitas la app, Nextcloud queda exactamente como estaba. No se modifica nada del corazón de Nextcloud.
