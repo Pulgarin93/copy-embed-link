@@ -10,6 +10,8 @@ Nextcloud's built-in sharing is great for sending files to people, but its links
 
 ## What it does
 
+- **Type-aware links.** The button recognizes what you are sharing. Audio, video, images and PDFs get an **embed link** that plays or displays inside the other app. Files that cannot be embedded — ZIP archives, design and project files (Adobe and similar) — get a **share link** for viewing and downloading instead, and the panel tells you clearly which kind of link you got.
+- **Original or converted.** When a file can be shared in more than one format, the button asks which one you want: the original file, or the converted format.
 - **One file, one link.** Sharing a single file exposes only that file — never the folder around it.
 - **Root link.** The link is tied to the file's internal identity, not its path, so it keeps working if you move the file to another folder or rename it. It only dies if the file is deleted.
 - **Real file name.** The link ends with the actual name and extension (`…/DRILL.mp3`), which is what media players in other apps require.
