@@ -10,6 +10,8 @@ El compartir de Nextcloud es excelente para enviar archivos a personas, pero sus
 
 ## Qué hace
 
+- **Enlaces según el tipo.** El botón reconoce lo que estás compartiendo. Audio, video, imágenes y PDF reciben un **enlace de embebido** que se reproduce o se ve dentro de la otra app. Los archivos que no se pueden embeber — comprimidos ZIP, diseños y proyectos (Adobe y similares) — reciben un **enlace de compartir** para ver y descargar, y el panel te dice claramente qué tipo de enlace te dio.
+- **Original o convertido.** Cuando un archivo se puede compartir en más de un formato, el botón pregunta cuál quieres: el archivo original o el formato convertido.
 - **Un archivo, un enlace.** Compartir un solo archivo expone solo ese archivo — nunca la carpeta que lo rodea.
 - **Enlace raíz.** El enlace va amarrado a la identidad interna del archivo, no a su ruta, así que sigue funcionando si mueves el archivo de carpeta o le cambias el nombre. Solo muere si el archivo se elimina.
 - **Nombre real.** El enlace termina en el nombre y la extensión verdaderos (`…/DRILL.mp3`), que es lo que los reproductores de otras apps exigen.
