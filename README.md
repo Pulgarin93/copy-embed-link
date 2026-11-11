@@ -16,6 +16,7 @@ Nextcloud's built-in sharing is great for sending files to people, but its links
 - **Root link.** The link is tied to the file's internal identity, not its path, so it keeps working if you move the file to another folder or rename it. It only dies if the file is deleted.
 - **Real file name.** The link ends with the actual name and extension (`…/DRILL.mp3`), which is what media players in other apps require.
 - **Access control.** Links can be public or protected with a password, and can have an expiration date.
+- **Permissions that don't clash.** Folder permissions and link permissions are independent — the most specific one wins. Share one file from a private folder and only that file becomes reachable (the app asks you first, in plain words, and you never need to copy the file elsewhere); lock a single file inside a public folder and it stays out of the share. Every link carries its own level: view-only, or download allowed.
 - **Selective folder sharing.** Share a folder and choose exactly which files are visible through the link; the rest stay hidden.
 - **One panel for everything.** A settings page lists every embed link you have created, with its access and expiration, ready to edit or revoke at any time.
 - **Non-invasive.** If you remove the app, Nextcloud stays exactly as it was. Nothing in Nextcloud's core is modified.
