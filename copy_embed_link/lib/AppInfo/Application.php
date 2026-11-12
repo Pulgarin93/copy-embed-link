@@ -16,10 +16,12 @@ declare(strict_types=1);
 
 namespace OCA\CopyEmbedLink\AppInfo;
 
+use OCA\CopyEmbedLink\Listener\LoadFilesScriptsListener;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 use OCP\AppFramework\Bootstrap\IRegistrationContext;
+use OCP\Files\Event\LoadAdditionalScriptsEvent;
 
 class Application extends App implements IBootstrap {
 	public const APP_ID = 'copy_embed_link';
@@ -29,11 +31,12 @@ class Application extends App implements IBootstrap {
 	}
 
 	public function register(IRegistrationContext $context): void {
-		// TODO: register the share-menu action, the link controller
-		// and the settings section.
+		$context->registerEventListener(
+			LoadAdditionalScriptsEvent::class,
+			LoadFilesScriptsListener::class
+		);
 	}
 
 	public function boot(IBootContext $context): void {
-		// TODO: load the Files app integration (button + sidebar section).
 	}
 }
