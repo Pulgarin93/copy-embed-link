@@ -1,10 +1,21 @@
 # Changelog
 
+
 All notable changes to Copy Embed Link are documented here.
+
+
+## 0.2.1 — 2026-11-22
+
+- **Fixed (Nextcloud 33)**: route names in `appinfo/routes.php` now use the
+  `controller#method` format that Nextcloud 33 requires. The old dot format
+  (`page.index`) made the router reject the app and broke the whole web
+  interface (HTTP 500 on every page). No other changes.
 
 ## 0.2.0 — 2026-11-11
 
+
 Phase 1 engine — the app now works end to end:
+
 
 - **Public link serving** under `/f/{token}/…`: the root URL redirects to the
   file URL ending in the file's real current name, so players and embedders
@@ -30,8 +41,11 @@ Phase 1 engine — the app now works end to end:
 - **Management panel** ("Embed links" in the app menu): every link with its
   type, file, expiry and download setting, with copy and revoke actions.
 
+
 ## 0.1.0 — 2026-11-11
+
 
 - Project foundation: app skeleton, the link entity and database table,
   file-type recognition (embed vs share), and the link service (root links
   bound to the file id, tokens, password hashing, per-child URLs).
+
