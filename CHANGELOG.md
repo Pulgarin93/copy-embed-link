@@ -1,8 +1,23 @@
 # Changelog
 
-
 All notable changes to Copy Embed Link are documented here.
 
+## 0.3.0 — 2026-11-22
+
+- **Files integration rebuilt for Nextcloud 33**: the "Copy embed link"
+  action is now registered with the modern `@nextcloud/files` v4 API
+  (`registerFileAction`), compiled with Vite (`@nextcloud/vite-config`)
+  from `src/files.js` into `js/copy_embed_link-files.mjs`. The legacy
+  script is gone: Nextcloud 33 removed the old `OCA.Files.fileActions`
+  and `OCA.Sharing.ShareTabSections` APIs it relied on, so the button
+  silently never appeared. The action keeps the exact same behaviour
+  and messages, including the privacy guard ("This folder is private.
+  Share just this file?"), now asked with the `@nextcloud/dialogs`
+  confirmation dialog and answered with its toasts.
+- **Fixed (app menu)**: the navigation entry now uses the
+  `<navigations><navigation>` structure in `appinfo/info.xml`. The old
+  bare `<navigation>` element is not read by the server's navigation
+  manager, so "Embed links" never showed in the app menu.
 
 ## 0.2.1 — 2026-11-22
 
@@ -13,9 +28,7 @@ All notable changes to Copy Embed Link are documented here.
 
 ## 0.2.0 — 2026-11-11
 
-
 Phase 1 engine — the app now works end to end:
-
 
 - **Public link serving** under `/f/{token}/…`: the root URL redirects to the
   file URL ending in the file's real current name, so players and embedders
@@ -41,11 +54,8 @@ Phase 1 engine — the app now works end to end:
 - **Management panel** ("Embed links" in the app menu): every link with its
   type, file, expiry and download setting, with copy and revoke actions.
 
-
 ## 0.1.0 — 2026-11-11
-
 
 - Project foundation: app skeleton, the link entity and database table,
   file-type recognition (embed vs share), and the link service (root links
   bound to the file id, tokens, password hashing, per-child URLs).
-
