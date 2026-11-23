@@ -6,9 +6,8 @@
     <summary>Copy a direct embed link for any file, ready to play inside other apps</summary>
     <description><![CDATA[Copy Embed Link adds the missing button to Nextcloud's share menu: a direct link to a single file that ends with the file's real name and extension, so audio, video, images and documents can be embedded and played inside other tools (AppFlowy, Notion, Obsidian, WordPress and any editor that accepts direct media links).
 
-
 The link is tied to the file's internal identity rather than its path, so it survives moves and renames. Links can be password-protected and can expire, folders can be shared showing only the files you select, and a settings panel lists every link you have created so you can edit or revoke it at any time.]]></description>
-    <version>0.2.1</version>
+    <version>0.3.0</version>
     <licence>agpl</licence>
     <author mail="" homepage="https://github.com/Pulgarin93">Pulgarin93</author>
     <namespace>CopyEmbedLink</namespace>
@@ -19,10 +18,11 @@ The link is tied to the file's internal identity rather than its path, so it sur
     <dependencies>
         <nextcloud min-version="31" max-version="33"/>
     </dependencies>
-    <navigation>
-        <name>Embed links</name>
-        <route>copy_embed_link.page.index</route>
-        <icon>app.svg</icon>
-    </navigation>
+    <navigations>
+        <navigation>
+            <name>Embed links</name>
+            <route>copy_embed_link.page.index</route>
+            <icon>app.svg</icon>
+        </navigation>
+    </navigations>
 </info>
-
